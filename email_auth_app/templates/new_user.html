@@ -3,14 +3,13 @@
         <title> Email Auth App </title>
     </head>
     <body>
-        To log in:
-        <form method="post" action="/login/">
+        <form method="post" action="/create_user/">
             {% csrf_token %}
             Enter your user name: <input type="text" name="username"/><br/>
+            Enter your email address: <input type="text" name="email"/><br/>
+            Enter your name: <input type="text" name="name"/><br/>
             <input type="submit" value="Submit"/>
         </form>
-        <br/>
-        Or <a href="/signup/">signup.</a>
     </body>
 
 </html>
