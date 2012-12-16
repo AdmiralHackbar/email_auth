@@ -5,6 +5,9 @@ A proof-of-concept Django webapp where user authentication is implemented by sen
 
 ### TODO:
 1, Remove login tokens as they are redeemed.
+
 2, Only redeem a token if it is used within 10 minutes of creation.
+
 3, Record the user's ip-address when the token is created. Only redeem the token if the user's ip address matches the ip-address when created.
+
 4, Drop a cookie tied to the token when the token is created. Only redeem the token if this cookie is present.
