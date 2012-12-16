@@ -33,7 +33,7 @@ def login_view(request):
 
 
 def login_token(request):
-    #TODO: validate that the token exists
+    #TODO: validate that the token exists and that it isn't expired
     token = Token.objects.get(pk=request.GET['token'], username=request.GET['username'])
 
     user = authenticate(username=request.GET['username'], password='password')
@@ -46,7 +46,7 @@ def signup(request):
 
 
 def create_user(request):
-    #TODO: verify that this user input is good.
+    #TODO: verify that this user input is valid.
     username = request.POST['username']
     email = request.POST['email']
     name = request.POST['name']
